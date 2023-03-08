@@ -1,0 +1,32 @@
+type Animal interface {
+	MakeSound() string
+}
+
+type Dog struct {
+	Name string
+}
+
+func (d Dog) MakeSound() string {
+	return "Woof!"
+}
+
+type Cat struct {
+	Name string
+}
+
+func (c Cat) MakeSound() string {
+	return "Meow!"
+}
+
+func main() {
+	animals := []Animal{Dog{Name: "Fido"}, Cat{Name: "Whiskers"}}
+
+	for _, animal := range animals {
+		fmt.Println(animal.MakeSound())
+	}
+}
+
+// Explain
+// In this example, we define an Animal interface with a MakeSound() method. We then define two structs, Dog and Cat, that implement the Animal interface by providing their own implementation of the MakeSound() method. Finally, we create a slice of Animal and add one instance of Dog and one instance of Cat to it. We then loop through the slice and call the MakeSound() method on each animal, which results in the appropriate sound being printed to the console.
+
+// This is an example of polymorphism because we're able to treat the Dog and Cat structs as if they're both Animal types, even though they have different implementations of the MakeSound() method. This allows us to write more generic code that can work with different types of animals, without having to know the specifics of each animal's implementation.

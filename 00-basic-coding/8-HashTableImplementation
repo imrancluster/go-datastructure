@@ -1,0 +1,29 @@
+type HashTable struct {
+    data map[int]int
+}
+
+// Add a key-value pair to the hash table
+func (ht *HashTable) Add(key int, value int) {
+    if ht.data == nil {
+        ht.data = make(map[int]int)
+    }
+    ht.data[key] = value
+}
+
+// Get the value associated with a key in the hash table
+func (ht *HashTable) Get(key int) int {
+    return ht.data[key]
+}
+
+// Remove a key-value pair from the hash table
+func (ht *HashTable) Remove(key int) {
+    delete(ht.data, key)
+}
+
+// Example usage
+ht := HashTable{}
+ht.Add(1, 10)
+ht.Add(2, 20)
+fmt.Println(ht.Get(1)) // Output: 10
+ht.Remove(1)
+fmt.Println(ht.Get(1)) // Output: 0 (zero value for int type)

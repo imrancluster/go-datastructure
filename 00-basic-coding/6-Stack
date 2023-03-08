@@ -1,0 +1,26 @@
+type Stack []int
+
+// Push a value onto the stack
+func (s *Stack) Push(value int) {
+    *s = append(*s, value)
+}
+
+// Pop a value off the stack
+func (s *Stack) Pop() int {
+    if len(*s) == 0 {
+        panic("stack is empty")
+    }
+    lastIndex := len(*s) - 1
+    value := (*s)[lastIndex]
+    *s = (*s)[:lastIndex]
+    return value
+}
+
+// Example usage
+s := Stack{}
+s.Push(1)
+s.Push(2)
+s.Push(3)
+fmt.Println(s.Pop()) // Output: 3
+fmt.Println(s.Pop()) // Output: 2
+fmt.Println(s.Pop()) // Output: 1

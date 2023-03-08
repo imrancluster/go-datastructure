@@ -1,0 +1,7 @@
+
+
+"Introduction to Time Complexity" by CS50: https://www.youtube.com/watch?v=8syQKTdgdzc
+In this video, David J. Malan from Harvard's CS50 course explains time complexity and Big O notation, which are essential concepts for analyzing the efficiency of algorithms. The video covers the basics of time complexity, including what it is, why it's important, and how to calculate it. It also includes examples of different time complexity classes and how to analyze the efficiency of algorithms using Big O notation.
+
+I hope you find this video helpful in understanding time complexity and its importance in problem-solving.
+
